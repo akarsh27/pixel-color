@@ -1,0 +1,21 @@
+/*Make a magenta square that is 200 pixels wide and 200 pixels high, like this:
+
+
+Think through the steps you will need to do to solve this problem. You will need to:
+
+1. Create a new image, specifying that the new image is 200 pixels wide and 200 pixels high.
+
+2. Then, for each pixel in that image:
+
+Make the pixel magenta 
+Magenta has a red value of 255, a green value of 0, and a blue value of 255*/
+//start of the code
+var img = new SimpleImage(200,200);
+for(var pixel of img.values())
+{
+    var newB=255-pixel.getBlue();//getting new blue value
+    var newR=255-pixel.getRed();//getting new red value
+    pixel.setBlue(newB);//converting initial blue into finalt blue value
+    pixel.setRed(newR);//converting initial red into final red value
+}  
+  print(img);
